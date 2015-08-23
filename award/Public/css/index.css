@@ -1,0 +1,40 @@
+body{
+	font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+.header{
+	
+}
+.container{
+	width:100%;
+	height:800px;
+	background-color: grey;
+}
+.output{
+	font-size:30px;
+
+}
+.output_name{
+	font-size: 40px;
+	color:blue;
+}
+.output_time{
+	font-size: 40px;
+}
+.registerbut{
+	position:absolute;
+	display:none;
+	top:200px;
+	left:700px;
+	width:500px;
+}
+.output_box{
+	margin-top:80px;
+}
+.talk_box{
+	height:600px;
+	overflow: scroll;
+}
+.user{
+	font-size: 20px;
+	padding-top: 10px;
+}
