@@ -8,23 +8,65 @@
   <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <title>award</title>
 </head>
-<script language="javascript">
-     var t = null;
-    t = setTimeout(time,1000);//开始执行
-    function time()
-    {
-       clearTimeout(t);//清除定时器
-       dt = new Date();
-       var h=dt.getHours();
-       var m=dt.getMinutes();
-       var s=dt.getSeconds();
-       document.getElementById("timeShow").innerHTML =  "现在的时间为："+h+"时"+m+"分"+s+"秒";
-       t = setTimeout(time,1000); //设定定时器，循环执行            
-    }
-  </script>
-</head>
-
 <body>
-<label id="timeShow"></lable>
+<h4>距离活动结束还有 
+  <strong id="RemainD"></strong>天 
+  <strong id="RemainH"></strong>小时 
+  <strong id="RemainM"></strong>分钟 
+  <strong id="RemainS"></strong>.
+  <strong id="RemainL"></strong>秒
+</h4>
+<input type ='text'id = "user_name" max-length ='15'/>
+<button type="" class="btn btn-primary" id ='award'>抢</button>
+</body>
+<script language="JavaScript">
+var runtimes = 0;
+function GetRTime(){
+  var nMS = <?php echo ($lefttime); ?>*1000-runtimes*1000;
+  if (nMS>=0){
+    var nD=Math.floor(nMS/(1000*60*60*24))%24;
+    var nH=Math.floor(nMS/(1000*60*60))%24;
+    var nM=Math.floor(nMS/(1000*60)) % 60;
+    var nS=Math.floor(nMS/1000) % 60;
+    document.getElementById("RemainD").innerHTML=nD;
+    document.getElementById("RemainH").innerHTML=nH;
+    document.getElementById("RemainM").innerHTML=nM;
+    document.getElementById("RemainS").innerHTML=nS;
+    runtimes++;
+    setTimeout("GetRTime()",1000);
+  }
+}
+var Num = 0;
+onload = function() {
+ Refresh();
+ setInterval("Refresh();",100);
+ GetRTime();
+}
+function Refresh() {
+  if (Num<10){
+    document.getElementById("RemainL").innerHTML = Num;
+    Num = Num + 1;
+  }else{
+    Num=0;
+  }
+}
+</script>
+<script>
+(function(){
+  $("#award").click(function(){
+    var user_name=$("#user_name").val();
+    $.post("<?php echo U('Index/checktime');?>",
+    {
+      user_name:user_name
+    },
+    function(data,status){
+    if(data == 0){
+      alert('请到时间再进行');
+    }else{
+      alert(data);      
+    }
+    });
+  });
+})();
 </script>
 </html>

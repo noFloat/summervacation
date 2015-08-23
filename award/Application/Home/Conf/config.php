@@ -15,9 +15,9 @@ return array(
     'db_pwd'   => '',
     'db_host'  => 'localhost',
     'db_port'  => '3306',
-    'db_name'  => 'chathome',
-    'DB_PREFIX'    =>  'chat_',     // 数据库表前缀
+    'db_name'  => 'award',
+    'DB_PREFIX'    =>  'award_',     // 数据库表前缀
     'DB_DSN'       =>  '',     // 数据库连接DSN 用于PDO方式
-    'DB_CHARSET'   =>  'utf8mb4', // 数据库的编码 默认为utf8
+    'DB_CHARSET'   =>  '', // 数据库的编码 默认为utf8
     '__PUBLIC__'=>'',
 );
