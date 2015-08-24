@@ -120,15 +120,15 @@ h2 a:hover {
     <h2><a href = "<?php echo U('Index/index');?>">Go</a> <a href="http://hongyan.cqupt.edu.cn/">hom<span>e</span></a></h2>
   </div>
   <ul style="position: relative; transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;" id="scene">
-    <li style="position: relative; display: block; left: 0px; top: 0px; transform: translate3d(43.6319px, 46.2779px, 0px); transform-style: preserve-3d; backface-visibility: hidden;" class="layer sidepattern" data-depth="0.40"><img src="/homework/chathome/chathome/Public/image/notfound/sidepattern.jpg"></li>
-    <li style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(21.816px, 23.1389px, 0px); transform-style: preserve-3d; backface-visibility: hidden;" class="layer toppattern" data-depth="0.20"><img src="/homework/chathome/chathome/Public/image/notfound/toppattern.jpg"></li>
-    <li style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(76.3559px, 80.9863px, 0px); transform-style: preserve-3d; backface-visibility: hidden;" class="layer bottompattern" data-depth="0.70"><img src="/homework/chathome/chathome/Public/image/notfound/bottompattern.jpg"></li>
+    <li style="position: relative; display: block; left: 0px; top: 0px; transform: translate3d(43.6319px, 46.2779px, 0px); transform-style: preserve-3d; backface-visibility: hidden;" class="layer sidepattern" data-depth="0.40"><img src="/homework/award/Public/image/notfound/sidepattern.jpg"></li>
+    <li style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(21.816px, 23.1389px, 0px); transform-style: preserve-3d; backface-visibility: hidden;" class="layer toppattern" data-depth="0.20"><img src="/homework/award/Public/image/notfound/toppattern.jpg"></li>
+    <li style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(76.3559px, 80.9863px, 0px); transform-style: preserve-3d; backface-visibility: hidden;" class="layer bottompattern" data-depth="0.70"><img src="/homework/award/Public/image/notfound/bottompattern.jpg"></li>
   </ul>
 </div>
 
-<script src="/homework/chathome/chathome/Public/js/stopExecutionOnTimeout.js"></script>
-<script src="/homework/chathome/chathome/Public/js/jquery.min.js"></script>
-<script src="/homework/chathome/chathome/Public/js/jquery.parallex.js"></script>
+<script src="/homework/award/Public/js/stopExecutionOnTimeout.js"></script>
+<script src="/homework/award/Public/js/jquery.min.js"></script>
+<script src="/homework/award/Public/js/jquery.parallex.js"></script>
 <script>
   $("#scene").parallax();
 </script>

@@ -20,4 +20,10 @@ return array(
     'DB_DSN'       =>  '',     // 数据库连接DSN 用于PDO方式
     'DB_CHARSET'   =>  '', // 数据库的编码 默认为utf8
     '__PUBLIC__'=>'',
+    'DATA_CACHE_TYPE' => 'Memcache', 
+    'host' => C('MEMCACHE_HOST') ? C('MEMCACHE_HOST') : '127.0.0.1',
+    'port' => C('MEMCACHE_PORT') ? C('MEMCACHE_PORT') : 11211,
+    'timeout' => C('DATA_CACHE_TIMEOUT') ? C('DATA_CACHE_TIMEOUT') : false,
+    'persistent' => false,
+    'expire' =>C('DATA_CACHE_TIME'),
 );
