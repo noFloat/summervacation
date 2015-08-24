@@ -9,12 +9,14 @@ class IndexController extends Controller{
         $this->display();
     }
 
-    public function checkcontent(){//上传消息
+    public function checkcontent(){//上传消息,正则过滤敏感字眼
         if(empty($_SESSION['user_name'])){
             echo 0;
         }else{
             $content['user_name'] = $_SESSION['user_name'];
             $content['comment_content'] =I(trim('post.content'));
+            $specialstring = "/tmd|你大爷|日/";
+            $content['comment_content']=preg_replace($specialstring,'河蟹',$content['comment_content']);
             $content['comment_time'] = date("Y-m-d H:i:s", time());
             $content['comment_state'] = 1;
             $comment = M('comment');
